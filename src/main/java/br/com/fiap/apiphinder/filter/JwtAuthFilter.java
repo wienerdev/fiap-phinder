@@ -3,9 +3,9 @@ package br.com.fiap.apiphinder.filter;
 import br.com.fiap.apiphinder.controller.dto.ApiErrorResponse;
 import br.com.fiap.apiphinder.helper.JwtHelper;
 import br.com.fiap.apiphinder.service.impl.UserDetailsServiceImpl;
+import br.com.fiap.apiphinder.utils.CommonUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.FilterChain;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -31,14 +31,14 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
-            throws ServletException, IOException {
+            throws IOException {
         try {
-            String authHeader = request.getHeader("Authorization");
+            String authHeader = request.getHeader(CommonUtils.HEADER_AUTHORIZATION);
 
             String token = null;
             String username = null;
-            if (authHeader != null && authHeader.startsWith("Bearer ")) {
-                token = authHeader.substring(7);
+            if (authHeader != null && authHeader.startsWith(CommonUtils.BEARER)) {
+                token = authHeader.substring(CommonUtils.BEARER.length());
                 username = JwtHelper.extractUsername(token);
             }
 
@@ -70,7 +70,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         try {
             return objectMapper.writeValueAsString(response);
         } catch (Exception e) {
-            return ""; // Return an empty string if serialization fails
+            return "";
         }
     }
 

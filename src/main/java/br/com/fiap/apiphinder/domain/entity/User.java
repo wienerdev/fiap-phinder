@@ -18,6 +18,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String email;
+
     private String username;
 
     private String password;
@@ -26,8 +28,9 @@ public class User {
     private List<WorkRecord> workRecords = new ArrayList<>();
 
 
-    public User(String username, String password) {
+    public User(String username, String email, String password) {
         this.username = username;
+        this.email = email;
         this.password = password;
     }
 }

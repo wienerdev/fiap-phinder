@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
         }
 
         String hashedPassword = passwordEncoder.encode(request.password());
-        User user = new User(request.username(), hashedPassword);
+        User user = new User(request.username(), request.email(), hashedPassword);
         repository.save(user);
     }
 }
