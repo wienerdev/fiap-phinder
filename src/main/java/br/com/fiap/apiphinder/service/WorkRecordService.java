@@ -1,9 +1,13 @@
 package br.com.fiap.apiphinder.service;
 
-import br.com.fiap.apiphinder.domain.entity.WorkRecord;
+import br.com.fiap.apiphinder.controller.dto.DailyWorkRecordResponse;
 import br.com.fiap.apiphinder.domain.enums.WorkRecordType;
+
+import java.util.List;
 
 public interface WorkRecordService {
 
-    public WorkRecord registerWorkRecord(String token, WorkRecordType type) throws Exception;
+    void registerWorkRecord(String token, WorkRecordType type) throws Exception;
+    List<DailyWorkRecordResponse> recordsVisualization(String token) throws Exception;
+
     }
