@@ -54,6 +54,10 @@ jobs:
         run: |
          oc import-image image-registry.openshift-image-registry.svc:5000/alissonskt-dev/fiap-phinder:0.0.3 --from=alissonskt/fiap-phinder:1.0.3 --confirm
 
-      - name: oc patch image
+      - name: Deploy App
         run: |
-          oc patch deployment fiap-phinder -p '{"spec":{"template":{"spec":{"containers":[{"name":"fiap-phinder","image":"default-route-openshift-image-registry.apps.sandbox-m2.ll9k.p1.openshiftapps.com/alissonskt-dev/fiap-phinder:1.0.3"}]}}}}' -n alissonskt-dev
+          oc patch dc fiap-phinder -p '{"spec":{"template":{"spec":{"containers":[{"name":"fiap-phinder","image":"default-route-openshift-image-registry.apps.sandbox-m2.ll9k.p1.openshiftapps.com/alissonskt-dev/fiap-phinder:1.0.3"}]}}}}' -n alissonskt-dev
+      
+      - name: oc rollout 
+        run: |
+          oc rollout status dc/fiap-phinder -n alissonskt-dev
