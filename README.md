@@ -1,4 +1,6 @@
-# FIAP PHINDER ⌚
+<h1 align="center">
+Fiap Phinder ⌚
+</h1>
 
 ### Endpoint da Aplicação
 
