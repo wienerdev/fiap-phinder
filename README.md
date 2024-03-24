@@ -62,7 +62,6 @@ spring:
 *OBS: Lembrando, que para obter um e-mail SMTP válido, é necessário seguir um passo a passo, segue da documentação utilizada no projeto: https://www.gmass.co/blog/gmail-smtp/
 
 <br>
-<br>
 
 Com o banco de dados devidamente configurado, rode o back-end da aplicação através do seguinte comando:
 
