@@ -70,10 +70,10 @@ Todos esses componentes são gerenciados pelo OpenShift, permitindo escalabilida
 ## Desenho da Solução
 
 ### Desenho de solução MVP
-![pod](/images/Mvp1.jpg)
+![pod](/assets/images/Mvp1.jpg)
 
 ### Desenho de solução evolutiva (fase 2)
-![pod](/images/Mvp2.png)
+![pod](/assets/images/Mvp2.png)
 
 <br>
 
@@ -115,11 +115,11 @@ Com a aplicação rodando, acesse alguma API platform e realize as requisições
 
 ### Collection Local
 
-[Clique aqui para realizar o download da collection](https://github.com/wienerdev/fiap-phinder](https://github.com/wienerdev/fiap-phinder/tree/main/assets/FIAP Phinder - LOCAL.postman_collection)
+[Clique aqui para realizar o download da collection](https://github.com/wienerdev/fiap-phinder/blob/main/assets/collections/FIAP-Phinder-LOCAL.postman_collection.json)
 
 ### Collection em Produção
 
-![Clique aqui para realizar o download da collection](https://github.com/wienerdev/fiap-phinder](https://github.com/wienerdev/fiap-phinder/tree/main/assets/FIAP Phinder - LOCAL.postman_collection)
+[Clique aqui para realizar o download da collection](https://github.com/wienerdev/fiap-phinder/blob/main/assets/collections/FIAP-Phinder-PROD.postman_collection.json)
 
 
 
