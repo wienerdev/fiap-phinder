@@ -103,6 +103,25 @@ spring:
     password: ${DB_PASSWORD}
 ```
 
+Depois disso, é necessário incluir nas variáveis do ambiente um endereço de email que seja um servidor SMTP válido, e a senha, para que seja possível enviar os e-mails no endpoint de geração de relatório:
+
+```
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+```
+
+*OBS: Lembrando, que para obter um e-mail SMTP válido, é necessário seguir um passo a passo, segue da documentação utilizada no projeto: https://www.gmass.co/blog/gmail-smtp/
+
 Com o banco de dados devidamente configurado, rode o back-end da aplicação através do seguinte comando:
 
 *Disponível em http://localhost:8080/
