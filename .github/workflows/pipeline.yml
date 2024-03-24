@@ -1,0 +1,59 @@
+name: Pipeline fiap-phinder
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: docker-practice/actions-setup-docker@master
+        timeout-minutes: 12
+      - run: |
+          set -x
+          docker version
+
+      - name: Install oc
+        uses: redhat-actions/openshift-tools-installer@v1
+        with:
+          oc: 4
+      
+      - name: oc login
+        run: |
+          oc login --token=${{ secrets.SECRET_OPENSHIFT }} --server=${{ secrets.OPENSHIFT_SERVER }}
+
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Setup java
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: mvn install
+        run: |
+          mvn install -DskipTests
+
+      - name: Analyze Sonar
+        run: |
+          mvn sonar:sonar -Dsonar.projectKey=alissonit_fiap-phinder -Dsonar.organization=alissonit -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=ae23283ac26045cc74e915412af17b439b4f00df
+
+      - name: mvn package
+        run: |
+          mvn clean package -DskipTests
+
+      - name: Docker build
+        run: |
+          docker build -t alissonskt/fiap-phinder:1.0.3 --build-arg APP_VERSION=api-phinder-1.0.3-SNAPSHOT .
+      
+      - name: oc import image
+        run: |
+         oc import-image image-registry.openshift-image-registry.svc:5000/alissonskt-dev/fiap-phinder:0.0.3 --from=alissonskt/fiap-phinder:1.0.3 --confirm
+
+      - name: oc patch image
+        run: |
+          oc patch deployment fiap-phinder -p '{"spec":{"template":{"spec":{"containers":[{"name":"fiap-phinder","image":"default-route-openshift-image-registry.apps.sandbox-m2.ll9k.p1.openshiftapps.com/alissonskt-dev/fiap-phinder:1.0.3"}]}}}}' -n alissonskt-dev

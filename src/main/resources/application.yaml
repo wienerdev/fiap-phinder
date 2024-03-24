@@ -8,9 +8,9 @@ spring:
     show-sql: true
     generate-ddl: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/fiap-phinder
-    username: root
-    password: 123456
+    url: jdbc:postgresql://postgresql.alissonskt-dev.svc.cluster.local:5432/fiap-phinder
+    username: ${DB_USERNAME}
+    password: ${}
     driver-class-name: org.postgresql.Driver
   mail:
     host: smtp.gmail.com

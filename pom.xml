@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.fiap</groupId>
 	<artifactId>api-phinder</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<name>api-phinder</name>
 	<description>API para Controle de Ponto</description>
 	<properties>
