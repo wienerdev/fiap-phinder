@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "5ca2d37d-9382-4404-95bc-2f14c571b95b",
-		"name": "FIAP Phinder - PROD",
+		"name": "FIAP-Phinder-PROD",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "20978304"
 	},
@@ -111,6 +111,40 @@
 							"key": "type",
 							"value": "SAIDA"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://fiap-phinder-alissonskt-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/api/v1/reports/record/monthly",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmaWFwLXdpZW5lciIsImlhdCI6MTcxMTMwOTI5NywiZXhwIjoxNzExMzEyODk3fQ.JuZiq0-Qy_bs3wJto8xMA-XJU6Vyj4kldKu2V9reRa0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fiap-phinder-alissonskt-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/api/v1/reports/record/monthly",
+					"protocol": "https",
+					"host": [
+						"fiap-phinder-alissonskt-dev",
+						"apps",
+						"sandbox-m2",
+						"ll9k",
+						"p1",
+						"openshiftapps",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"reports",
+						"record",
+						"monthly"
 					]
 				}
 			},

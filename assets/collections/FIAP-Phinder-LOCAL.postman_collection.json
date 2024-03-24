@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "44eb6c05-46b1-4ade-976a-f06d508221b6",
-		"name": "FIAP Phinder - LOCAL",
+		"name": "FIAP-Phinder-LOCAL",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "20978304"
 	},
@@ -101,6 +101,35 @@
 							"key": "type",
 							"value": "SAIDA"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/reports/record/monthly",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXRoZXVzIiwiaWF0IjoxNzExMTk4OTIwLCJleHAiOjE3MTEyMDI1MjB9.N_K_hddtYOO7xWAfwnqv7xjUGvKl6tbGpYkljMzW7PA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/reports/record/monthly",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"reports",
+						"record",
+						"monthly"
 					]
 				}
 			},
