@@ -42,3 +42,9 @@ Nossa infraestrutura no OpenShift consiste em DeploymentConfigs para configurar 
 Todos esses componentes são gerenciados pelo OpenShift, permitindo escalabilidade e automação de implantação.
 
 ![infra](/images/fiap-infra-phinder.drawio.png)
+
+## Desenho de solução MVP
+![pod](/images/Mvp1.jpg)
+
+## Desenho de solução evolutiva (fase 2)
+![pod](/images/Mvp2.png)
