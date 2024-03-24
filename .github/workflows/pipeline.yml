@@ -52,7 +52,7 @@ jobs:
       
       - name: oc import image
         run: |
-         oc import-image image-registry.openshift-image-registry.svc:5000/alissonskt-dev/fiap-phinder:0.0.3 --from=alissonskt/fiap-phinder:1.0.3 --confirm
+         oc import-image image-registry.openshift-image-registry.svc:5000/alissonskt-dev/fiap-phinder:1.0.3 --from=alissonskt/fiap-phinder:1.0.3 --confirm
 
       - name: Deploy App
         run: |
