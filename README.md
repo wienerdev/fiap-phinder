@@ -17,25 +17,25 @@ OpenShift é uma plataforma de contêineres baseada em Kubernetes, desenvolvida 
 
 ### Aplicações criadas
 
-![pod](/images/pods-openshift.png)
+![pod](/assets/images/pods-openshift.png)
 
 ### Infra escalável
 
-![pod](/images/scale-pod.png)
+![pod](/assets/images/scale-pod.png)
 
 ### Evidência do banco criado
 
-![db](/images/evidência_db.png)
+![db](/assets/images/evidência_db.png)
 
 ### evidência de todos os recursos criados no Namespace do openshift:
 
-![all](/images/all_resources.png)
+![all](/assets/images/all_resources.png)
 
 ## Evidência execução CI/CD via Github Action
 
 https://github.com/wienerdev/fiap-phinder/actions/runs/8406386739/job/23020206825
 
-![cicd](/images/action.png)
+![cicd](/assets/images/action.png)
 
 ## Arquitetura Infra Openshift
 
@@ -43,10 +43,10 @@ Nossa infraestrutura no OpenShift consiste em DeploymentConfigs para configurar 
 
 Todos esses componentes são gerenciados pelo OpenShift, permitindo escalabilidade e automação de implantação.
 
-![infra](/images/fiap-infra-phinder.drawio.png)
+![infra](/assets/images/fiap-infra-phinder.drawio.png)
 
 ## Desenho de solução MVP
-![pod](/images/Mvp1.jpg)
+![pod](/assets/images/Mvp1.jpg)
 
 ## Desenho de solução evolutiva (fase 2)
-![pod](/images/Mvp2.png)
+![pod](/assets/images/Mvp2.png)

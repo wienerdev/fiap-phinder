@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "5ca2d37d-9382-4404-95bc-2f14c571b95b",
+		"name": "FIAP Phinder - PROD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20978304"
+	},
+	"item": [
+		{
+			"name": "https://fiap-phinder-alissonskt-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/api/v1/auth/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"wienerdev\",\r\n    \"email\": \"matheuswiener9@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fiap-phinder-alissonskt-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/api/v1/auth/signup",
+					"protocol": "https",
+					"host": [
+						"fiap-phinder-alissonskt-dev",
+						"apps",
+						"sandbox-m2",
+						"ll9k",
+						"p1",
+						"openshiftapps",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://fiap-phinder-alissonskt-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/api/v1/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"wienerdev\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fiap-phinder-alissonskt-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/api/v1/auth/login",
+					"protocol": "https",
+					"host": [
+						"fiap-phinder-alissonskt-dev",
+						"apps",
+						"sandbox-m2",
+						"ll9k",
+						"p1",
+						"openshiftapps",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://fiap-phinder-alissonskt-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/api/v1/record?type=SAIDA",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXRoZXVzIiwiaWF0IjoxNzExMTk4OTIwLCJleHAiOjE3MTEyMDI1MjB9.N_K_hddtYOO7xWAfwnqv7xjUGvKl6tbGpYkljMzW7PA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fiap-phinder-alissonskt-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/api/v1/record?type=SAIDA",
+					"protocol": "https",
+					"host": [
+						"fiap-phinder-alissonskt-dev",
+						"apps",
+						"sandbox-m2",
+						"ll9k",
+						"p1",
+						"openshiftapps",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"record"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "SAIDA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://fiap-phinder-alissonskt-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/api/v1/record",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3aWVuZXJkZXYiLCJpYXQiOjE3MTEyNDM5MjQsImV4cCI6MTcxMTI0NzUyNH0.qYAo6deAeiiKqBh4yR6KwZGhm5hYK_4ctUlJ3etW5Sw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fiap-phinder-alissonskt-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/api/v1/record",
+					"protocol": "https",
+					"host": [
+						"fiap-phinder-alissonskt-dev",
+						"apps",
+						"sandbox-m2",
+						"ll9k",
+						"p1",
+						"openshiftapps",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"record"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
