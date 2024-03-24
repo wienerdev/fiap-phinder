@@ -2,6 +2,93 @@
 Fiap Phinder ⌚
 </h1>
 
+# 💡 Solução
+
+## Link do vídeo explicando o projeto
+
+<br>
+
+https://drive.google.com/file/d/1qZofIXZrkcA51ckGIpj0MGIP3IiksX8m/view?usp=sharing
+
+<br>
+
+## Desenho da Solução
+
+### Desenho de solução MVP
+![pod](/assets/images/Mvp1.jpg)
+
+### Desenho de solução evolutiva (fase 2)
+![pod](/assets/images/Mvp2.png)
+
+<br>
+
+## 🧮 Arquitetura da Aplicação
+
+Utilizamos a <b>arquitetura em camadas</b>, que é um dos padrões de arquitetura de software mais tradicionais e amplamente adotados, especialmente em aplicações empresariais. A ideia é separar as responsabilidades do software em camadas distintas, cada uma com uma responsabilidade clara, promovendo assim a organização do código, a manutenção e a escalabilidade do sistema.
+
+<br>
+
+## ⚠ Pré-requisitos para execução do projeto
+
+* Java 17 ou inferior
+* Maven
+* PostgreSQL
+
+<br>
+
+## 📌 Como utilizar?
+
+Para utilizar o Fiap Phinder, é necessário ter uma instância de conexão do banco de dados ativa (no caso PostgreSQL), que por padrão fica na porta 5432, caso sua porta esteja diferente, especifique no application.yaml em:
+
+```
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fiap-phinder
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+```
+
+Depois disso, é necessário incluir nas variáveis do ambiente um endereço de email que seja um servidor SMTP válido, e a senha, para que seja possível enviar os e-mails no endpoint de geração de relatório:
+
+```
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+```
+
+*OBS: Lembrando, que para obter um e-mail SMTP válido, é necessário seguir um passo a passo, segue da documentação utilizada no projeto: https://www.gmass.co/blog/gmail-smtp/
+
+<br>
+
+Com o banco de dados devidamente configurado, rode o back-end da aplicação através do seguinte comando:
+
+*Disponível em http://localhost:8080/
+
+```
+mvn spring-boot:run 
+```
+
+Com a aplicação rodando, acesse alguma API platform e realize as requisições!
+
+### Collection Local
+
+[Clique aqui para realizar o download da collection](https://github.com/wienerdev/fiap-phinder/blob/main/assets/collections/FIAP-Phinder-LOCAL.postman_collection.json)
+
+### Collection em Produção
+
+[Clique aqui para realizar o download da collection](https://github.com/wienerdev/fiap-phinder/blob/main/assets/collections/FIAP-Phinder-PROD.postman_collection.json)
+
+<br>
+
 # 🖥️ Infraestrutura
 
 <br>
@@ -61,68 +148,6 @@ Todos esses componentes são gerenciados pelo OpenShift, permitindo escalabilida
 ![infra](/assets/images/fiap-infra-phinder.drawio.png)
 
 <br>
-<br>
-
-# 💡 Solução
-
-<br>
-
-## Desenho da Solução
-
-### Desenho de solução MVP
-![pod](/images/Mvp1.jpg)
-
-### Desenho de solução evolutiva (fase 2)
-![pod](/images/Mvp2.png)
-
-<br>
-
-## 🧮 Arquitetura da Aplicação
-
-Utilizamos a <b>arquitetura em camadas</b>, que é um dos padrões de arquitetura de software mais tradicionais e amplamente adotados, especialmente em aplicações empresariais. A ideia é separar as responsabilidades do software em camadas distintas, cada uma com uma responsabilidade clara, promovendo assim a organização do código, a manutenção e a escalabilidade do sistema.
-
-<br>
-
-## ⚠ Pré-requisitos para execução do projeto
-
-* Java 17 ou inferior
-* Maven
-* PostgreSQL
-
-<br>
-
-## 📌 Como utilizar?
-
-Para utilizar o Fiap Phinder, é necessário ter uma instância de conexão do banco de dados ativa (no caso PostgreSQL), que por padrão fica na porta 5432, caso sua porta esteja diferente, especifique no application.yaml em:
-
-```
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/fiap-phinder
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
-```
-
-Com o banco de dados devidamente configurado, rode o back-end da aplicação através do seguinte comando:
-
-*Disponível em http://localhost:8080/
-
-```
-mvn spring-boot:run 
-```
-
-Com a aplicação rodando, acesse alguma API platform e realize as requisições!
-
-### Collection Local
-
-[Clique aqui para realizar o download da collection](https://github.com/wienerdev/fiap-phinder](https://github.com/wienerdev/fiap-phinder/tree/main/assets/FIAP Phinder - LOCAL.postman_collection)
-
-### Collection em Produção
-
-![Clique aqui para realizar o download da collection](https://github.com/wienerdev/fiap-phinder](https://github.com/wienerdev/fiap-phinder/tree/main/assets/FIAP Phinder - LOCAL.postman_collection)
-
-
-
 <br>
 
 ## ⚠️ Links importantes
