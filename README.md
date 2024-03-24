@@ -1,5 +1,9 @@
 # COLOCAR AQUI INFORMAÇÕES SOBRE ARQUITETURA DE CÓDIGO
 
+### Endpoint da Aplicação
+
+https://fiap-phinder-alissonskt-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/
+
 # Infraestrutura
 
 ### Infra criada no Openshift Container Platform
