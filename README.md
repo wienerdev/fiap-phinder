@@ -4,6 +4,10 @@ Fiap Phinder ⌚
 
 # 💡 Solução
 
+## Link do vídeo explicando o projeto
+
+https://drive.google.com/file/d/1qZofIXZrkcA51ckGIpj0MGIP3IiksX8m/view?usp=sharing
+
 <br>
 
 ## Desenho da Solução
